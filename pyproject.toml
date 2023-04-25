@@ -34,9 +34,9 @@ test = [
 ]
 
 [project.urls]
-homepath = "https://github.com/oele-isis-vanderbilt/chimerapy-tutorial"
-documentation = "https://oele-isis-vanderbilt.github.io/chimerapy-tutorial"
-repository = "https://github.com/oele-isis-vanderbilt/chimerapy-tutorial"
+homepath = "https://github.com/oele-isis-vanderbilt/ChimeraPyTutorial"
+documentation = "https://github.com/oele-isis-vanderbilt/ChimeraPyTutorial"
+repository = "https://github.com/oele-isis-vanderbilt/ChimeraPyTutorial"
 
 [build-system]
 requires = ["setuptools", "wheel"]
