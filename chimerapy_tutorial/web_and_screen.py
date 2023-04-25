@@ -28,7 +28,6 @@ class VideoNode(cp.Node):
     def step(self) -> cp.DataChunk:
         time.sleep(1 / self.frame_rate)
         ret, frame = self.video.read()
-        print(ret, frame)
         if not ret:
             return None
         if self.debug:
@@ -74,7 +73,6 @@ if __name__ == "__main__":
     time_now = time.time()
     while True:
         video_node.step()
-        print(time.time() - time_now)
         if time.time() - time_now > 10:
             break
     video_node.shutdown()

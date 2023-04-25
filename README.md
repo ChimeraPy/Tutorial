@@ -33,3 +33,11 @@ optional arguments:
 ```shell
 $ cp-orchestrator orchestrate --config orchestration-configs/video-show.json
 ```
+
+## Running yolo
+Install [`torch`](https://pytorch.org/get-started/locally/). Then run:
+```shell
+
+$ pip install yolov5
+$  cp-orchestrator orchestrate --config orchestration-configs/yolo.json
+```

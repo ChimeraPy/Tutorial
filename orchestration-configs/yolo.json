@@ -1,0 +1,59 @@
+{
+  "workers": {
+    "manager_ip": "localhost",
+    "manager_port": 9001,
+    "instances": [
+      {
+        "name": "local",
+        "id": "local",
+        "description": "local worker for the MMLA pipeline demo with a video node"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "registry_name": "chimerapy_tutorial.VideoNode",
+      "name": "test-1",
+      "kwargs": {
+        "video_src": "TestData/test1.mp4"
+      }
+    },
+    {
+      "registry_name": "chimerapy_tutorial.YOLONode",
+      "name": "yolo",
+      "kwargs": {
+        "classes": [
+          "person"
+        ],
+        "per_row_display": 2,
+        "debug": null
+      }
+    },
+    {
+      "registry_name": "chimerapy_tutorial.ShowWindow",
+      "name": "test-3",
+      "kwargs": {
+        "frames_key": "frame"
+      }
+    }
+  ],
+  "adj": [
+    [
+      "test-1",
+      "yolo"
+    ]
+  ],
+  "manager_config": {
+    "logdir": "cp-logs",
+    "port": 9001
+  },
+  "mappings": {
+    "local": [
+      "test-1",
+      "yolo"
+    ]
+  },
+  "discover_nodes_from": [
+    "chimerapy_tutorial"
+  ]
+}
