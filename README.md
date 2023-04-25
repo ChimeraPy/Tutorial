@@ -1,10 +1,10 @@
 # ChimeraPy Tutorial
-In these tutorial, we will look at how to use the ChimeraPy to create multimodal data collection pipelines.
+In this tutorial, we will look at how to use the ChimeraPy to create multimodal data collection pipelines.
 
 ## Installation
 To install ChimeraPy, you can use `pip` and `conda`:
 ```bash
-$ git clone git@github.com:oele-isis-vanderbilt/chimerapy-tutorial.git
+$ git clone git@github.com:oele-isis-vanderbilt/ChimeraPyTutorial.git
 $ cd chimerapy-tutorial
 $ conda create -n chimerapy-tutorial python=3.9
 $ conda activate chimerapy-tutorial
