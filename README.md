@@ -15,10 +15,11 @@ Download the test data from [here](https://vanderbilt.box.com/s/2xpp0e2uy3mhr1iu
 
 ## Run using script
 ```shell
-Usage: ChimerapyTutorial [-h] [--manager-port MANAGER_PORT] [--manager-logdir MANAGER_LOGDIR] {web_and_screen,yolo}
+$ python run.py --help
+usage: ChimerapyTutorial [-h] [--manager-port MANAGER_PORT] [--manager-logdir MANAGER_LOGDIR] {web_and_screen}
 
 positional arguments:
-  {web_and_screen,yolo}
+  {web_and_screen}
 
 optional arguments:
   -h, --help            show this help message and exit
