@@ -13,3 +13,9 @@ After installing `conda`, we will create a new environment for the tutorial. To 
 ```bash
 $ conda create -n chimerapy-tutorial python=3.10 -c conda-forge -c defaults
 ```
+
+The above command will create a new Python environment named `chimerapy-tutorial`, with Python version 3.10. The `-c` flag is used to specify the channel from which to install the package. The `conda-forge` channel is a community-led collection of recipes, build infrastructure and distributions for the `conda` package manager. The `defaults` channel is the primary channel for `conda` packages. You can activate the environment by running:
+
+```bash
+$ conda activate chimerapy-tutorial
+```
