@@ -23,3 +23,7 @@ $ git clone git@github.com:oele-isis-vanderbilt/ChimeraPyTutorial.git
 4. [Packaging and Plugin Architecture](./03-Packaging/README.md)
 5. [Implementing Custom Nodes (Recording Modalities)](./04-CustomNodes/README.md)
 6. [ChimeraPy CLI](./05-PipelineCLI/README.md)
+7. [Packaging YOLO](./06-PackagingYOLO/README.md)
+
+## License
+ChimeraPy uses the GNU GENERAL PUBLIC LICENSE, as found in [LICENSE](./LICENSE) file.

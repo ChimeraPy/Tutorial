@@ -1,10 +1,10 @@
 [project]
 name = "chimerapy-tutorial"
 version = "0.0.1"
-description = "Multimodal Data Pipeline"
-license = {file = "LICENSE.txt"}
+description = "Tutorial for ChimeraPy"
+license = {file = "LICENSE"}
 readme = "README.md"
-requires-python = ">3.6"
+requires-python = ">3.8"
 
 keywords = ["education", "multimodal", "data", "learning", "analytics"]
 
@@ -13,14 +13,13 @@ classifiers = [
 ]
 
 dependencies = [
-    'chimerapy',
     'numpy',
     'imutils',
-    'opencv-python',
     'pillow',
     'dxcam; sys_platform == "win32"',
     'seaborn',
     'requests',
+    'chimerapy @ git+https://github.com/oele-isis-vanderbilt/ChimeraPy@main#egg=chimerapy',
     'chimerapy-orchestrator @ git+https://github.com/oele-isis-vanderbilt/ChimeraPyOrchestrator@main#egg=chimerapy_orchestrator',
 ]
 
@@ -31,6 +30,12 @@ test = [
     'pytest-lazy-fixture',
     'pytest-rerunfailures',
     'pre-commit',
+]
+
+yolo = [
+    'torch',
+    'torchvision',
+    'yolov5'
 ]
 
 [project.urls]
@@ -48,6 +53,10 @@ include-package-data = true
 
 [tool.setuptools.packages.find]
 where = ["."]
+
+
+[project.entry-points."chimerapy_orchestrator.nodes_registry"]
+get_nodes_registry = "chimerapy_tutorial:register_nodes_metadata"
 
 # Reference:
 # https://stackoverflow.com/questions/4673373/logging-within-pytest-tests

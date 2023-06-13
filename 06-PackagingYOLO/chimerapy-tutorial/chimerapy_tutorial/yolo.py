@@ -92,7 +92,7 @@ COCO_ORIGINAL_NAMES = [
 ]
 
 
-@step_node(name="chimerapy_tutorial.YOLONode")
+@step_node(name="ChimeraPyTutorial_YOLONode")
 class YOLONode(cp.Node):
     def __init__(
         self,
@@ -111,15 +111,14 @@ class YOLONode(cp.Node):
 
         self.per_row_display = per_row_display
         self.frames_key = frames_key
+        self.debug = debug
+        super().__init__(name=name)
 
-        super().__init__(name=name, debug=debug)
-
-    def prep(self):
+    def setup(self):
         # Create the YOLOv5 model
         import torch
 
         self.model = torch.hub.load("ultralytics/yolov5", "yolov5s", trust_repo=True)
-
         # Select only the interested classes
         if self.interested_classes_idx:
             self.model.classes = self.interested_classes_idx
@@ -128,7 +127,7 @@ class YOLONode(cp.Node):
         # Aggreate all inputs
         imgs = []
         for name, data_chunk in data_chunks.items():
-            img = data_chunk.get(self.frames_key)["value"].image
+            img = data_chunk.get(self.frames_key)["value"]
             img = imutils.resize(img, width=400)
             imgs.append(img)
 
