@@ -11,7 +11,7 @@ def get_manager(port=9001, logdir="runs"):
 
 def get_web_and_screen_pipeline(worker):
     graph = cp.Graph()
-    video_node = VideoNode(video_src="TestData/test1.mp4")
+    video_node = VideoNode(video_src="../TestData/test1.mp4")
     webcam_node = ShowWindow()
     graph.add_nodes_from([video_node, webcam_node])
     graph.add_edge(video_node, webcam_node)

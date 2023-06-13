@@ -1,43 +1,12 @@
 # ChimeraPy Tutorial
-In this tutorial, we will look at how to use the ChimeraPy to create multimodal data collection pipelines.
 
-## Installation
-To install ChimeraPy, you can use `pip` and `conda`:
-```bash
-$ git clone git@github.com:oele-isis-vanderbilt/ChimeraPyTutorial.git
-$ cd chimerapy-tutorial
-$ conda create -n chimerapy-tutorial python=3.9
-$ conda activate chimerapy-tutorial
-$ pip install -e .
-```
+This tutorial is a step by step guide to using ChimeraPy to create multimodal data collection pipelines with the ChimeraPy framework.
 
-Download the test data from [here](https://vanderbilt.box.com/s/2xpp0e2uy3mhr1iuipnpbgumf80yqyuu)
+## Prerequisites
+Download the test data required for this tutorial from [here](https://vanderbilt.box.com/s/2xpp0e2uy3mhr1iuipnpbgumf80yqyuu).
 
-## Run using script
-```shell
-$ python run.py --help
-usage: ChimerapyTutorial [-h] [--manager-port MANAGER_PORT] [--manager-logdir MANAGER_LOGDIR] {web_and_screen}
+## Contents
 
-positional arguments:
-  {web_and_screen}
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --manager-port MANAGER_PORT
-                        The manager port (default: 9001)
-  --manager-logdir MANAGER_LOGDIR
-                        The manager logdir (default: runs)
-```
-
-## Run with ChimeraPyOrchestrator
-```shell
-$ cp-orchestrator orchestrate --config orchestration-configs/video-show.json
-```
-
-## Running yolo
-Install [`torch`](https://pytorch.org/get-started/locally/). Then run:
-```shell
-
-$ pip install yolov5
-$  cp-orchestrator orchestrate --config orchestration-configs/yolo.json
-```
+1. [Introduction to Python and creating conda environments](./00-Python-Conda-Setup/README.md)
+2. [ChimeraPy Framework: Introduction](./01-Introduction/README.md)
+3. 
