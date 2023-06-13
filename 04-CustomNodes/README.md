@@ -3,3 +3,4 @@ Now that we have the packaging taken care of and understand the basics of implme
 
 The source code is available in the following (a.) [`video_node.py`](./chimerapy-tutorial/chimerapy_tutorial/video_node.py) (b.) [`show_node.py`](./chimerapy-tutorial/chimerapy_tutorial/show_node.py)
 
+After implementation, we will look at registering the nodes with the ChimeraPy framework via entrypoints and executing the pipeline with JSON configuration.
