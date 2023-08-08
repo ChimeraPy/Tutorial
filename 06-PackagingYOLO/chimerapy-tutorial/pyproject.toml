@@ -55,7 +55,7 @@ include-package-data = true
 where = ["."]
 
 
-[project.entry-points."chimerapy_orchestrator.nodes_registry"]
+[project.entry-points."chimerapy.orchestrator.nodes_registry"]
 get_nodes_registry = "chimerapy_tutorial:register_nodes_metadata"
 
 # Reference:
