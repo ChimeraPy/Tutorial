@@ -1,6 +1,12 @@
 # ChimeraPy Tutorial
+<p align="center">
+  <a href="https://github.com/ChimeraPy/Benchmarks"><img src="./images/banner.png" alt="ChimeraPy"></a>
+</p>
+<p align="center">
+    <em>Step by step guide for using the ChimeraPy framework.</em>
+</p>
 
-This tutorial is a step by step guide to using ChimeraPy to create multimodal data collection pipelines with the ChimeraPy framework.
+ChimeraPy is a Scientific, Distributed Computing Framework for Real-time Multimodal Data Retrieval and Processing. This repo provides a step by step guide to using ChimeraPy to create multimodal data collection pipelines with the ChimeraPy framework.
 
 ## Prerequisites
 1. Install git if you don't have it already. You can download it from [here](https://git-scm.com/downloads).

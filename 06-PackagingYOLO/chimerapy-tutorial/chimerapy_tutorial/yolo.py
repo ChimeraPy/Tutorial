@@ -1,9 +1,9 @@
 from typing import Dict, List, Literal, Optional
 
-import chimerapy as cp
+import chimerapy.engine as cpe
 import cv2
 import imutils
-from chimerapy_orchestrator import step_node
+from chimerapy.orchestrator import step_node
 from .data import Frame
 
 
@@ -93,7 +93,7 @@ COCO_ORIGINAL_NAMES = [
 
 
 @step_node(name="ChimeraPyTutorial_YOLONode")
-class YOLONode(cp.Node):
+class YOLONode(cpe.Node):
     def __init__(
         self,
         name: str,
@@ -123,7 +123,7 @@ class YOLONode(cp.Node):
         if self.interested_classes_idx:
             self.model.classes = self.interested_classes_idx
 
-    def step(self, data_chunks: Dict[str, cp.DataChunk]):
+    def step(self, data_chunks: Dict[str, cpe.DataChunk]):
         # Aggreate all inputs
         imgs = []
         for name, data_chunk in data_chunks.items():
@@ -137,7 +137,7 @@ class YOLONode(cp.Node):
         # # Get the rendered image
         renders = results.render()
 
-        data_chunk = cp.DataChunk()
+        data_chunk = cpe.DataChunk()
         data_chunk.add("frame", Frame(image=renders[0], label="YOLOv5"))
         cv2.imshow("YOLOv5", renders[0])
         cv2.waitKey(1)
