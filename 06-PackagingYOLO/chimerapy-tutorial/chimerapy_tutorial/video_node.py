@@ -2,15 +2,15 @@ import datetime
 import time
 from typing import Optional, Union
 
-import chimerapy as cp
+import chimerapy.engine as cpe
 import cv2
 import imutils
 import numpy as np
-from chimerapy_orchestrator import sink_node, source_node
+from chimerapy.orchestrator import sink_node, source_node
 
 
 @source_node(name="ChimeraPyTutorial_Video")
-class Video(cp.Node):
+class Video(cpe.Node):
     """A generic video capture node.
 
     This can be used to capture a local webcam or a video from the local file system
@@ -72,8 +72,8 @@ class Video(cp.Node):
         self.cp = cv2.VideoCapture(self.video_src)
         self.frame_count = 0
 
-    def step(self) -> cp.DataChunk:
-        data_chunk = cp.DataChunk()
+    def step(self) -> cpe.DataChunk:
+        data_chunk = cpe.DataChunk()
         ret, frame = self.cp.read()
 
         if not ret:

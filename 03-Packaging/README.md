@@ -39,10 +39,10 @@ To create a custom Node, we overwrite the `setup`, `step`, and `teardown` method
 
 ```python
 import time
-import chimerapy as cp
+import chimerapy.engine as cpe
 import numpy as np
 
-class RandomNode(cp.Node):
+class RandomNode(cpe.Node):
 
     def setup(self):
         # Create the generator to be used later
@@ -73,9 +73,9 @@ For this example, the RandomNode is a source node. Step and sink have a step(sel
 A main attribute of ChimeraPy is that it does not assume what type of data is being transmitted between Nodes. Therefore, when developing your custom node implementations, the step function can return anything that is serializable. There are moments when this isn’t beneficial. For example, to make video streaming work in real time, it is required to compress video frames with an algorithm optimized for images. This implies that ChimeraPy must then know what is being transmitted. This is achieved through the use of the DataChunk container. This is an example for a video streaming Node:
 
 ```python
-class ScreenCapture(cp.Node):
+class ScreenCapture(cpe.Node):
 
-    def step(self) -> cp.DataChunk:
+    def step(self) -> cpe.DataChunk:
 
         time.sleep(1 / 10)
         frame = cv2.cvtColor(
@@ -83,7 +83,7 @@ class ScreenCapture(cp.Node):
         )
 
         # Create container and send it
-        data_chunk = cp.DataChunk()
+        data_chunk = cpe.DataChunk()
         data_chunk.add("frame", frame, "image")
         return data_chunk
 ```
@@ -104,7 +104,7 @@ For the node implementation above, we would register it as follows:
 from chimerapy_orchestrator.registry.utils import source_node
 
 @source_node(name="ChimeraPyTutorial_RandomNode", add_to_registry=False)
-class RandomNode(cp.Node):
+class RandomNode(cpe.Node):
     ...
 ```
 

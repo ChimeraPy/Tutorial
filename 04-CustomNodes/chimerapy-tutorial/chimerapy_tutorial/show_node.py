@@ -1,13 +1,13 @@
 from typing import Any, Dict, Optional, Tuple
 
-import chimerapy as cp
+import chimerapy.engine as cpe
 import cv2
 import numpy as np
-from chimerapy_orchestrator import sink_node
+from chimerapy.orchestrator import sink_node
 
 
 @sink_node(name="ChimeraPyTutorial_ShowWindows")
-class ShowWindows(cp.Node):
+class ShowWindows(cpe.Node):
     """A node to show the video/images in a window.
 
     Parameters
@@ -31,7 +31,7 @@ class ShowWindows(cp.Node):
         self.window_xy = np.array(window_xy, dtype=int) if window_xy else None
         super().__init__(name=name, **kwargs)
 
-    def step(self, data_chunks: Dict[str, cp.DataChunk]) -> None:
+    def step(self, data_chunks: Dict[str, cpe.DataChunk]) -> None:
         for idx, (name, data_chunk) in enumerate(data_chunks.items()):
             frame = data_chunk.get(self.frames_key)["value"]
             maybe_metadata = data_chunk.get("metadata")

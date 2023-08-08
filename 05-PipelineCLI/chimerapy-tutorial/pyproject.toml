@@ -19,8 +19,8 @@ dependencies = [
     'dxcam; sys_platform == "win32"',
     'seaborn',
     'requests',
-    'chimerapy @ git+https://github.com/oele-isis-vanderbilt/ChimeraPy@main#egg=chimerapy',
-    'chimerapy-orchestrator @ git+https://github.com/oele-isis-vanderbilt/ChimeraPyOrchestrator@main#egg=chimerapy_orchestrator',
+    'chimerapy-engine',
+    'chimerapy-orchestrator',
 ]
 
 [project.optional-dependencies]
@@ -49,7 +49,7 @@ include-package-data = true
 where = ["."]
 
 
-[project.entry-points."chimerapy_orchestrator.nodes_registry"]
+[project.entry-points."chimerapy.orchestrator.nodes_registry"]
 get_nodes_registry = "chimerapy_tutorial:register_nodes_metadata"
 
 # Reference:

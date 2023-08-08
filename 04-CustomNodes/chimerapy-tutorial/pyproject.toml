@@ -19,8 +19,8 @@ dependencies = [
     'dxcam; sys_platform == "win32"',
     'seaborn',
     'requests',
-    'chimerapy @ git+https://github.com/oele-isis-vanderbilt/ChimeraPy@main#egg=chimerapy',
-    'chimerapy-orchestrator @ git+https://github.com/oele-isis-vanderbilt/ChimeraPyOrchestrator@main#egg=chimerapy_orchestrator',
+    'chimerapy-orchestrator',
+    'chimerapy-engine'
 ]
 
 [project.optional-dependencies]
