@@ -14,11 +14,11 @@ ChimeraPy is a Scientific, Distributed Computing Framework for Real-time Multimo
 2. Download the test data required for this tutorial from [here](https://vanderbilt.box.com/s/2xpp0e2uy3mhr1iuipnpbgumf80yqyuu) and clone this repository for a step-by-step guide:
 
 ```bash
-$ git clone https://github.com/oele-isis-vanderbilt/ChimeraPyTutorial.git
+$ git clone https://github.com/ChimeraPy/Tutorial.git
 ```
 or
 ```bash
-$ git clone git@github.com:oele-isis-vanderbilt/ChimeraPyTutorial.git
+$ git clone git@github.com:ChimeraPy/Tutorial.git
 ```
 
 ## Contents
